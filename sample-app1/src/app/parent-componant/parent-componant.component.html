@@ -4,7 +4,20 @@ First name : <input type="text" name="firstName"  [(ngModel)] = "firstName" />
 Last name : <input type="text" name="lastName"  [(ngModel)] = "lastName" />
 
 <!-- Passing hardcoded values as input parameter -->
-<app-child-componant firstName="Balasaheb" lastName="Sherkar" ></app-child-componant>
+<app-child-componant 
+    firstName="Balasaheb" 
+    lastName="Sherkar">
+</app-child-componant>
 
 <!-- Passing varibales values as input parameter -->
-<app-child-componant [firstName]="firstName" [lastName]="lastName" ></app-child-componant>
+<app-child-componant 
+    [firstName]="firstName" 
+    [lastName]="lastName">
+</app-child-componant>
+
+<!-- Passing varibales values as input parameter -->
+<app-child-componant 
+    [firstName]="firstName" 
+    [lastName]="lastName" 
+    (onUpdateClick)="updateClicked($event)">
+</app-child-componant>

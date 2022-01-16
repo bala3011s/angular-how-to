@@ -17,4 +17,7 @@ export class ParentComponantComponent implements OnInit {
     this.lastName = 'sherkar';
   }
 
+  updateClicked(event: string){
+    alert(event);
+  }
 }

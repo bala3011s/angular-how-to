@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-child-componant',
@@ -12,10 +12,16 @@ export class ChildComponantComponent implements OnInit {
   @Input()
   lastName!: string;
 
+  @Output()
+  onUpdateClick: EventEmitter<string> = new EventEmitter();
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  updateClick(){
+    this.onUpdateClick.emit('update called.');
   }
 
 }
